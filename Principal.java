@@ -1,7 +1,5 @@
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 
 /*
  * For this example I used the synchronice block, but there are other ways to do that give much more play.
@@ -50,7 +48,7 @@ public class Principal {
 }
 
 //Instance two methods one for increase and another to decrease the counter.
-class Operation extends Thread{
+class Operation{
 	 
 	public  void sum(){
 		
@@ -93,8 +91,7 @@ class MyThread extends Thread {
 	public void run() {
 		
 		// When synchronizing the object thread appropriates it and not allow another touch it until the end.
-		// If you remove the same results in class (bad)
-				
+		// If you remove the same results in class (bad)				
 		synchronized (operation) {
 			
 			switch (this.tipoOperacion) {
